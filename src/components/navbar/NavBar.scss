@@ -1,0 +1,110 @@
+@import "../../responsive.scss";
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100px;
+}
+.left {
+  display: flex;
+  flex: 3;
+  //   justify-content: center;
+  align-items: center;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    @include md {
+      margin-left: 10px;
+    }
+  }
+  .logo span {
+    margin-left: 10px;
+    font-size: 19px;
+    font-weight: bolder;
+    @include md {
+      display: none;
+    }
+  }
+  .navlinks {
+  }
+  .navlinks {
+    display: flex;
+    gap: 40px;
+    margin-left: 70px;
+    @include md {
+      gap: 25px;
+      margin-left: 20px;
+      margin-right: 40px;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2;
+  gap: 20px;
+  height: 100%;
+  @include md {
+    gap: 2px;
+  }
+  .profButton {
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 5px;
+    @include sm {
+      display: none;
+    }
+  }
+  .menuIcon {
+    display: none;
+    img {
+      width: 40px;
+      height: 40px;
+      margin-left: 20px;
+        // position: absolute;
+
+    }
+
+    @include sm {
+      display: block;
+    }
+  }
+  @include sm{
+   
+    .drawer {
+        position: absolute;
+        top: 0;
+        right: 0;
+    width: 50%;
+
+    height: 100vh;
+    background-color: black;
+
+    
+  }
+  }
+ 
+  
+}
+.profImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  @include md {
+    gap: 5px;
+  }
+}
