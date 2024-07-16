@@ -30,8 +30,7 @@
       display: none;
     }
   }
-  .navlinks {
-  }
+
   .navlinks {
     display: flex;
     gap: 40px;
@@ -65,35 +64,61 @@
     }
   }
   .menuIcon {
+    position: relative;
     display: none;
     img {
+    position: relative;
+      cursor: pointer;
       width: 40px;
       height: 40px;
       margin-left: 20px;
-        // position: absolute;
-
+      z-index: 999;
+      // position: absolute;
     }
 
     @include sm {
       display: block;
     }
   }
-  @include sm{
-   
+  .drawer{
+    display: none;
+  }
+  @include sm {
+    // display: initial;
     .drawer {
-        position: absolute;
-        top: 0;
-        right: 0;
-    width: 50%;
-
-    height: 100vh;
-    background-color: black;
-
-    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 65px;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: -50%;
+      width: 50%;
+      height: 100vh;
+      background-color: black;
+      transition: all 0.5s ease-out;
+      
+    }
+    .active {
+      // display:inline;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 65px;
+      flex-direction: column;
+      
+       position: absolute;
+      top: 0;
+      right: 0;
+       width: 50%;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      z-index: 1;
+      ;
+    }
   }
-  }
- 
-  
 }
 .profImage {
   display: flex;
