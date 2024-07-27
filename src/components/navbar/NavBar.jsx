@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NavBar.scss";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -11,9 +12,8 @@ const NavBar = () => {
             <span>LamaEstate</span>
           </div>
           <div className="navlinks">
-            <a href="" className="home">
-              Home
-            </a>
+            <Link to="/homepage">Home</Link>
+
             <a href="" className="about">
               About
             </a>

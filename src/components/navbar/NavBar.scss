@@ -56,13 +56,18 @@
   height: 100%;
   @include md {
     gap: 2px;
+    background-color: white;
   }
   .profButton {
     padding: 10px;
-    background-color: yellow;
+    background-color: rgb(255, 221, 0);
     border-radius: 5px;
     @include sm {
       display: none;
+    }
+    @include md{
+      margin: 30px;
+      padding: 10px 20px
     }
   }
   .menuIcon {
